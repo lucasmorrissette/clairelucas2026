@@ -6,13 +6,6 @@
   --border: #cfd8e6;
 }
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: var(--bg) url('blue-floral.png') repeat;
-  background-size: 300px;
-  color: #333;
-}
 
 body {
   margin: 0;
