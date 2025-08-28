@@ -1,57 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Claire & Lucas Wedding — June 13, 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claire & Lucas Wedding</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1 class="names">Claire & Lucas</h1>
-    <p class="subtitle">June 13, 2026 — The Stone House of St. Charles</p>
-  </header>
-
-  <!-- Tabs Navigation -->
-  <nav class="tabs">
-    <button class="tab-btn active" data-tab="details">Wedding Details</button>
-    <button class="tab-btn" data-tab="rsvp">RSVP</button>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Wedding Details</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
   </nav>
 
-  <main class="container">
-    <!-- Wedding Details Tab -->
-    <section id="details" class="tab-content active">
-      <div class="hero">
-        <img src="hero.jpg" alt="Claire and Lucas" class="hero-img">
-      </div>
-      <div class="card">
-        <h2>Wedding Details</h2>
-        <p><strong>Date:</strong> Saturday, June 13, 2026</p>
-        <p><strong>Time:</strong> Ceremony at 4:00 PM — Reception to follow</p>
-        <p><strong>Venue:</strong> The Stone House of St. Charles</p>
-        <p><strong>Address:</strong> 4401 McClay Rd, St Charles, MO 63304</p>
-        <p><a href="https://www.google.com/maps/search/?api=1&query=4401+McClay+Rd+St+Charles+MO+63304" target="_blank">📍 View on Google Maps</a></p>
+  <header>
+    <h1 class="wedding-title">Claire Shroba & Lucas Morrissette</h1>
+    <p class="date">June 13th, 2026</p>
+    <p class="venue">The Stone House of St. Charles</p>
+    <p class="wedding-address">4401 McClay Rd, St Charles, MO 63304</p>
+  </header>
+</body>
+</html>
 
-        <h3>Schedule</h3>
-        <ul>
-          <li>3:00 PM — Guest arrival & seating</li>
-          <li>4:00 PM — Ceremony</li>
-          <li>5:00 PM — Cocktail hour</li>
-          <li>6:00 PM — Dinner & speeches</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- RSVP Tab -->
-    <section id="rsvp" class="tab-content">
-      <div class="card">
-        <h2>RSVP</h2>
-        <form id="rsvp-form">
-          <label>
-            Full name
-            <input type="text" id="fullname" required>
-          </label>
           <label>
             Email
             <input type="email" id="email" required>
