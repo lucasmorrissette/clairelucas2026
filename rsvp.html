@@ -1,71 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RSVP — Claire & Lucas</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP - Claire & Lucas Wedding</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header small">
-    <div class="container header-inner">
-      <h1 class="names small">Claire & Lucas</h1>
-      <p class="subtitle">Please let us know if you'll join us — June 13, 2026</p>
-    </div>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Wedding Details</a></li>
+      <li><a href="rsvp.html" class="active">RSVP</a></li>
+    </ul>
+  </nav>
 
-  <main class="container main-content">
-    <section class="card vintage rsvp-card">
-      <h2>RSVP</h2>
-      <form id="rsvp-form">
-        <label>
-          Full name
-          <input type="text" name="fullname" id="fullname" required />
-        </label>
+  <section class="rsvp-form">
+    <h2>RSVP</h2>
+    <form id="rsvpForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-        <label>
-          Email
-          <input type="email" name="email" id="email" required />
-        </label>
+      <label for="attendance">Will you attend?</label>
+      <select id="attendance" name="attendance" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
 
-        <fieldset>
-          <legend>Will you attend?</legend>
-          <label><input type="radio" name="attendance" value="Attending" checked> Attending</label>
-          <label><input type="radio" name="attendance" value="Not Attending"> Not Attending</label>
-        </fieldset>
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="0" required>
 
-        <label>
-          Number of guests (including you)
-          <input type="number" name="guests" id="guests" min="1" max="10" value="1" required />
-        </label>
-
-        <label>
-          Meal preference (optional)
-          <select name="meal" id="meal">
-            <option value="">No preference</option>
-            <option>Beef</option>
-            <option>Chicken</option>
-            <option>Vegetarian</option>
-            <option>Gluten-free</option>
-          </select>
-        </label>
-
-        <label>
-          Song request (optional)
-          <input type="text" name="song" id="song" placeholder="Song you'd love to hear" />
-        </label>
-
-        <div class="form-actions">
-          <button type="submit" class="button">Send RSVP</button>
-          <a class="button ghost" href="index.html">Back</a>
-        </div>
-
-        <div id="form-message" class="form-message" aria-live="polite"></div>
-      </form>
-    </section>
-  </main>
+      <button type="submit">Submit RSVP</button>
+    </form>
+  </section>
 
   <script src="main.js"></script>
 </body>
