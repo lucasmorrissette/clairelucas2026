@@ -1,24 +1,155 @@
-:root{
-  --bg:#fbf7f3;
-  --card:#fffaf6;
-  --accent:#a66b5f;
-  --muted:#6b5e58;
-  --gold:#c9a76b;
+:root {
+  --bg: #f8f5f0;
+  --card: #fffdf9;
+  --accent: #9c6b4f;   /* vintage rose gold */
+  --accent-dark: #6f4b38;
+  --muted: #5c514c;
+  --gold: #d4af37;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:'Roboto',system-ui;background:#fbf7f3;color:var(--muted)}
-.container{max-width:980px;margin:0 auto;padding:24px}
-.site-header{text-align:center;padding:36px 0 12px}
-.names{font-family:'Playfair Display',serif;font-size:44px;margin:8px 0 0;color:var(--accent)}
-.subtitle{margin:6px 0 0;color:var(--muted)}
-.hero{display:flex;justify-content:center;margin:18px 0}
-.hero-img{max-width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.08)}
-.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(16,12,8,0.06);margin:20px 0}
-.button{display:inline-block;padding:10px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;border:none;font-weight:600;cursor:pointer}
-.button.ghost{background:transparent;border:1px solid var(--accent);color:var(--accent)}
-.rsvp-card label{display:block;margin:12px 0;font-size:14px}
-.rsvp-card input,.rsvp-card select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:6px;font-size:14px}
-fieldset{border:none;padding:0;margin:12px 0}
-fieldset label{display:inline-block;margin-right:12px;font-size:14px}
-.footer{text-align:center;padding:14px;font-size:13px}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Roboto', serif;
+  background: var(--bg) url('floral-top.png') repeat;
+  background-size: 400px;
+  color: var(--muted);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+
+/* HEADER */
+.site-header {
+  text-align: center;
+  padding: 60px 0 30px;
+  border-bottom: 3px solid var(--gold);
+  background: linear-gradient(180deg, #fffdf9 60%, rgba(255,255,255,0));
+}
+.names {
+  font-family: 'Playfair Display', serif;
+  font-size: 54px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.subtitle {
+  margin-top: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--accent-dark);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+.hero-img {
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 8px solid #fff;
+  outline: 2px solid var(--gold);
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  padding: 32px;
+  margin: 30px 0;
+  border-radius: 16px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.card h2, .card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+.card ul li {
+  margin: 6px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 20px;
+}
+
+/* BUTTONS */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--gold), #f7d774);
+  color: #3d2d1f;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.button.ghost {
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--accent-dark);
+}
+
+/* RSVP FORM */
+.rsvp-card label {
+  display: block;
+  margin: 14px 0;
+  font-weight: 500;
+}
+.rsvp-card input[type="text"],
+.rsvp-card input[type="email"],
+.rsvp-card input[type="number"],
+.rsvp-card select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-dark);
+  margin-top: 6px;
+  font-size: 16px;
+  background: #fff;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+fieldset {
+  border: none;
+  margin: 14px 0;
+}
+fieldset legend {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+fieldset label {
+  margin-right: 16px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  color: var(--accent-dark);
+  border-top: 2px solid var(--gold);
+}
