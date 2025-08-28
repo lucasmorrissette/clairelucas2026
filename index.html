@@ -3,53 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Claire & Lucas — June 13, 2026</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Claire & Lucas Wedding — June 13, 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="names">Claire & Lucas</h1>
-      <p class="subtitle">June 13, 2026 — The Stone House of St. Charles</p>
-    </div>
+    <h1 class="names">Claire & Lucas</h1>
+    <p class="subtitle">June 13, 2026 — The Stone House of St. Charles</p>
   </header>
 
-  <main class="container main-content">
-    <section class="hero">
-      <img src="hero.jpg" alt="Claire and Lucas" class="hero-img" id="hero-photo">
-    </section>
+  <!-- Tabs Navigation -->
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="details">Wedding Details</button>
+    <button class="tab-btn" data-tab="rsvp">RSVP</button>
+  </nav>
 
-    <section class="details card vintage">
-      <h2>Wedding Details</h2>
-      <p><strong>Date:</strong> Saturday, June 13, 2026</p>
-      <p><strong>Time:</strong> Ceremony at 4:00 PM — Reception to follow</p>
-      <p><strong>Venue:</strong> The Stone House of St. Charles</p>
-      <p><strong>Address:</strong> 4401 McClay Rd, St Charles, MO 63304</p>
-
-      <div class="map-link">
-        <a href="https://www.google.com/maps/search/?api=1&query=4401+McClay+Rd+St+Charles+MO+63304" target="_blank" rel="noopener">Open in Google Maps</a>
+  <main class="container">
+    <!-- Wedding Details Tab -->
+    <section id="details" class="tab-content active">
+      <div class="hero">
+        <img src="hero.jpg" alt="Claire and Lucas" class="hero-img">
       </div>
+      <div class="card">
+        <h2>Wedding Details</h2>
+        <p><strong>Date:</strong> Saturday, June 13, 2026</p>
+        <p><strong>Time:</strong> Ceremony at 4:00 PM — Reception to follow</p>
+        <p><strong>Venue:</strong> The Stone House of St. Charles</p>
+        <p><strong>Address:</strong> 4401 McClay Rd, St Charles, MO 63304</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=4401+McClay+Rd+St+Charles+MO+63304" target="_blank">📍 View on Google Maps</a></p>
 
-      <hr>
-      <h3>Schedule (tentative)</h3>
-      <ul>
-        <li>3:00 PM — Guest arrival & seating</li>
-        <li>4:00 PM — Ceremony</li>
-        <li>5:00 PM — Cocktail hour</li>
-        <li>6:00 PM — Dinner & speeches</li>
-      </ul>
-
-      <p class="cta">
-        <a class="button" href="rsvp.html">RSVP</a>
-      </p>
+        <h3>Schedule</h3>
+        <ul>
+          <li>3:00 PM — Guest arrival & seating</li>
+          <li>4:00 PM — Ceremony</li>
+          <li>5:00 PM — Cocktail hour</li>
+          <li>6:00 PM — Dinner & speeches</li>
+        </ul>
+      </div>
     </section>
 
-    <footer class="card footer vintage">
-      <p>Vintage floral inspired design · See RSVP page to confirm attendance</p>
-    </footer>
+    <!-- RSVP Tab -->
+    <section id="rsvp" class="tab-content">
+      <div class="card">
+        <h2>RSVP</h2>
+        <form id="rsvp-form">
+          <label>
+            Full name
+            <input type="text" id="fullname" required>
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" required>
+          </label>
+          <fieldset>
+            <legend>Will you attend?</legend>
+            <label><input type="radio" name="attendance" value="Attending" checked> Attending</label>
+            <label><input type="radio" name="attendance" value="Not Attending"> Not Attending</label>
+          </fieldset>
+          <label>
+            Number of guests
+            <input type="number" id="guests" min="1" max="10" value="1" required>
+          </label>
+          <label>
+            Meal preference
+            <select id="meal">
+              <option value="">No preference</option>
+              <option>Beef</option>
+              <option>Chicken</option>
+              <option>Vegetarian</option>
+              <option>Gluten-free</option>
+            </select>
+          </label>
+          <label>
+            Song request
+            <input type="text" id="song" placeholder="Optional">
+          </label>
+          <button type="submit" class="button">Send RSVP</button>
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>Claire & Lucas — June 13, 2026 · Designed with love 💙</p>
+  </footer>
 
   <script src="main.js"></script>
 </body>
