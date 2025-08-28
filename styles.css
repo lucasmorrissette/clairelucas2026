@@ -12,7 +12,8 @@ body {
   font-family: 'Roboto', serif;
   background: #ffffff url('floral-bg.jpg') repeat;
   background-size: 500px;
-  color: #2c3e50;
+  color: #000000;   /* black text */
+  font-weight: bold;  /* bold text */
   -webkit-font-smoothing: antialiased;
 }
 
